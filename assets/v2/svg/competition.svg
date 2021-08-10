@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14">
+  <g>
+    <path class="cls-1" d="M11,9v2h2V9ZM7,9v2H9V9Zm2,2v2h2V11ZM7,9v2H9V9Zm4,0v2h2V9Zm2-2V9h2V7Zm8,10V5H19V7H17V9h2v2H17v2h2v4H18v2h4V17Zm-6-6h2V9H15Zm-2,2h2V11H13Zm-2-2h2V9H11ZM7,11H9V9H7Zm4-2v2h2V9ZM9,7V9h2V7ZM7,9v2H9V9Zm4,0v2h2V9ZM7,9v2H9V9ZM7,9V7H5V5H3V17H2v2H6V17H5V13H7V11H5V9ZM7,9v2H9V9Zm4,0v2h2V9Z" transform="translate(-2 -5)"/>
+    <polygon class="cls-1" points="13 6 13 6 13 6 13 6"/>
+    <polygon class="cls-1" points="15 6 15 6 15 6 15 6"/>
+    <polygon class="cls-1" points="9 6 9 6 9 6 9 6"/>
+    <polygon class="cls-1" points="11 6 11 6 11 6 11 6"/>
+    <polygon class="cls-1" points="5 6 5 6 5 6 5 6"/>
+    <polygon class="cls-1" points="7 6 7 6 7 6 7 6"/>
+  </g>
+</svg>

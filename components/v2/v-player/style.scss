@@ -1,0 +1,48 @@
+.v-player {
+    /deep/ {
+        .plyr {
+            .plyr__controls {
+
+                button.plyr__control {
+                    padding: 4px 5px;
+                    margin-bottom: 0;
+
+                    svg {
+                        width: 14px;
+                        height: 14px;
+                    }
+
+                    &[data-plyr=play] {
+                        margin-bottom: 1px;
+                        
+                        svg {
+                            width: 11px;
+                            height: 11px;
+                        }
+                    }
+                }
+
+                .plyr__progress,
+                .plyr__volume {
+                    input[type=range] {
+                        --value: 0%;
+
+                        &::-webkit-slider-thumb {
+                            height: 12px;
+                            width: 12px;
+                            margin-top: -3px;
+                        }
+
+                        &::-webkit-slider-runnable-track {
+                            background-image: linear-gradient(to right,currentColor var(--value),transparent var(--value));
+                        }
+                    }
+                }
+
+                .plyr__time {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

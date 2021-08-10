@@ -1,0 +1,32 @@
+.page {
+    font-weight: 500;
+    line-height: 1.4;
+    
+   .area {
+       margin: 40px 0;
+
+       .headline {
+           h1, h2 {
+            font-size: 18px;
+            padding-bottom: 8px;
+           }
+       }
+   }
+
+
+   @media (max-width: 479px) {
+        & {
+            .area {
+                .headline {
+                    margin-bottom: 20px;
+
+                    h1, h2 {
+                        font-size: 16px !important;
+                        font-weight: 500 !important;
+                        padding-bottom: 4px;
+                    }
+                }
+            }
+        }
+    }
+}

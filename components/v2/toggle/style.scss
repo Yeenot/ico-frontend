@@ -1,0 +1,49 @@
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 19px;
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #e2e8ea;
+        @include border-radius(19px);
+        @include transition(.4s);
+
+        &:before {
+            position: absolute;
+            content: "";
+            height: 17px;
+            width: 17px;
+            left: 1px;
+            bottom: 1px;
+            border-radius: 50%;
+            background-color: #25ae88;
+            @include transition(.4s);
+        }
+    }
+
+    input {
+        display: none;
+
+        &:checked + .slider {
+            background-color: #25ae88;
+
+            &:before {
+                background-color: #ffffff;
+                @include translateX(15px);
+            }
+        }
+
+        &:focus + .slider {
+            -webkit-box-shadow: 0 0 1px #25ae88;
+            -moz-box-shadow: 0 0 1px #25ae88;
+            box-shadow: 0 0 1px #25ae88;
+        }
+    }
+}

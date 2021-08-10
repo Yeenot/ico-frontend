@@ -1,0 +1,167 @@
+.ico-reviews {
+    font-size: 12px;
+    font-weight: 500;
+    color: #868889;
+
+    .container {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    .column {
+        padding: 0 15px 15px 15px;
+    }
+
+    .ico {
+        max-width: 380px;
+        margin: 0 auto;
+        position: relative;
+        background-color: #fafbfd;
+        padding: 14px 16px 16px 82px;
+        border: 1px solid #e8ecef;
+
+        .logo {
+            position: absolute;
+            top: 14px;
+            left: 15px;
+            width: 53px;
+            height: 53px;
+        }
+
+        .name {
+            font-size: 16px;
+            font-weight: 700;
+            color: #373737;
+        }
+
+        /deep/ .total-score {
+            margin-top: 5px;
+        }
+
+        .description {
+            margin-top: 11px;
+            line-height: 1.5;
+            min-height: 12em;
+        }
+
+        .actions {
+            margin-top: 17px;
+            text-align: center;
+
+            button {
+                color: #4093c7;
+                border-color: #4093c7;
+                font-weight: 500 !important;
+                @include transition(all .2s ease-in-out)
+            }
+        }
+
+        & {
+            &:hover {
+                @include box-shadow(0px 0px 24px 5px rgba(206, 201, 201, 0.75));
+            
+                .actions {
+                    button {
+                        background-color: #4093c7;
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: 1100px) {
+        & {
+            .column {
+                @include flex(0 0 (100%/3) !important);
+            }
+
+            .ico {
+                max-width: 100%;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+
+        & {
+            .ico {
+                padding: 15px 15px 15px 82px;
+
+                &:not(:first-child) {
+                    border-top: 0;
+                }
+
+                .logo {
+                    top: 15px;
+                    left: 15px;
+                    width: 52px;
+                    height: 52px;
+                }
+
+                .name {
+                    font-size: 16px;
+                }
+
+                /deep/ .total-score {
+                    margin-top: 4px;
+                }
+
+                .description {
+                    margin-top: 13px;
+                }
+
+                .actions {
+                    margin-top: 15px;
+        
+                    button {
+                        font-weight: 500 !important;
+                        padding: 8px 12px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 479px) {
+        & {
+            max-width: 355px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 12px;
+
+            .column {
+                & + .column {
+                    margin-top: 15px;
+                }
+            }
+            
+            .ico {
+                .name {
+                    font-size: 14px;
+                }
+
+                /deep/ .total-score {
+                    .info {
+                        padding-top: 1px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 355px) {
+        & {
+            .ico {
+                .description {
+                    padding-top: 10px;
+                    margin-left: -67px;
+                }
+
+                .actions {
+                    margin-left: -67px;
+                }
+            }
+        }
+    }
+}

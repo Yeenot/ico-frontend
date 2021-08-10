@@ -1,0 +1,69 @@
+.box {
+    border: 1px solid #e4eaeb;
+
+    .heading {
+        position: relative;
+        background-color: #f6fafc;
+        font-size: 12px;
+        font-weight: 500;
+        color: $light-default;
+        border-bottom: 1px solid #e2ebf6;
+        padding: 22px 15px;
+        text-transform: uppercase;
+
+        .description {
+            font-size: 13px;
+            font-weight: 500;
+            color: #9497a6;
+        }
+
+        /deep/ .icon-group {
+            position: absolute;
+            top: 22px;
+            right: 15px;
+
+            .icon {
+                fill: #cfdefb;
+                height: 14px !important;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .content {
+        background-color: #ffffff;
+    }
+
+    .list {
+
+        /deep/ .piece {
+            border-bottom: 1px solid #e2ebf6;
+            color: $dark;
+
+            /deep/ .icon-group {
+                .icon {
+                    height: 20px;
+                }
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        .list {
+            /deep/ .piece {
+                border-bottom: 1px solid #e2ebf6;
+                color: $dark;
+    
+                /deep/ .icon-group {
+                    .icon {
+                        height: 17px;
+                    }
+                }
+            }
+        }
+    }
+}

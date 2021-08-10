@@ -1,0 +1,111 @@
+.fade-enter-active {
+    transition: opacity 0.1s ease;
+}
+.fade-leave-active {
+    transition: opacity 0.1s ease;
+}
+.fade-enter, .fade-leave-to {
+    opacity: 0;
+}
+
+.tab {
+    @include flex-container();
+
+    .menu {
+        @include flex(0 0 210px);
+        border-right: 1px solid #e1ebfb;
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            font-size: 15px;
+            font-weight: 600;
+
+            /deep/ li {
+                position: relative;
+                color: $tertiary;
+                padding: 7px 29px 7px 0;
+                text-align: right;
+                margin-bottom: 17px;
+                cursor: pointer;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                &.selected {
+                    color: $primary;
+
+                    &:after {
+                        content: "";
+                        width: 2px;
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: auto;
+                        right: -2px;
+                        background-color: $tertiary;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .content {
+        flex: 1;
+        min-height: 400px;
+        padding: 0 95px;
+    }
+}
+
+@media #{$phone} {
+    .tab {
+        @include flex-direction(column);
+
+        .menu {
+            @include flex(1);
+            border-right: 0;
+            border-bottom: 1px solid #e1ebfb;
+            margin-bottom: 30px;
+
+            ul {
+                font-size: 14px;
+
+                li {
+                    float: left;
+                    text-align: left;
+                    margin-bottom: 0;
+                    margin-right: 15px;
+                    padding: 15px 0;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+    
+                    &.selected {
+                        color: $primary;
+    
+                        &:after {
+                            content: "";
+                            width: auto;
+                            height: 2px;
+                            display: block;
+                            position: absolute;
+                            top: auto;
+                            bottom: 0;
+                            left: -2px;
+                            right: 0;
+                            background-color: $tertiary;
+                        }
+                    }
+                }
+            }
+        }
+
+        .content {
+            padding: 0;
+        }
+    }
+}

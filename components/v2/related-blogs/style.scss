@@ -1,0 +1,70 @@
+.articles {
+    color: #a1a3a4;
+    /deep/ .swiper {
+
+        .swipe--prev {
+            left: -46px;
+        }
+
+        .swipe--next {
+            right: -46px;
+        }
+    }
+
+    .bottom {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    @media (max-width: 767px) {
+        & {
+            padding-left: 50px;
+            padding-right: 50px;
+
+            .swiper {
+                .swipe--prev,
+                .swipe--next {
+
+                    img {
+                        width: 26px;
+                        height: auto;
+                    }
+                }
+
+                .swipe--prev {
+                    left: -50px;
+                }
+
+                .swipe--next {
+                    right: -50px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 479px) {
+        & {
+            padding-left: 15px;
+            padding-right: 15px;
+
+            .swiper {
+                .swipe--prev,
+                .swipe--next {
+
+                    img {
+                        width: 15px;
+                        height: auto;
+                    }
+                }
+
+                .swipe--prev {
+                    left: -22px;
+                }
+
+                .swipe--next {
+                    right: -22px;
+                }
+            }
+        }
+    }
+}

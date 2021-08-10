@@ -1,0 +1,35 @@
+#search {
+    max-width: 323px;
+    margin-top: 9px;
+
+    input {
+        font-size: 13px;
+        text-transform: uppercase;
+    }
+
+    .addon {
+        padding: 10px;
+    }
+
+   /deep/ .icon-group {
+        cursor: pointer;
+        .icon {
+            height: 16px;
+            fill: #e4eaeb;
+
+            .svg-wrapper {
+                height: 15px;
+            }
+        }
+    }
+
+    .mobile {
+        margin-top: 36px;
+
+        /deep/ .icon-group {
+            .icon {
+                fill: $primary;
+            }
+        }
+    }
+}

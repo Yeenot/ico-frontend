@@ -1,0 +1,13 @@
+.feeds {
+    @include flex-container();
+    position: fixed;
+    left: auto;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+
+    /deep/ .feed {
+      @include flex-direction(column);
+      margin-right: 15px;
+    }
+  }

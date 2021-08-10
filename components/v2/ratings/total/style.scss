@@ -1,0 +1,122 @@
+.total-score {
+    @include flex-container();
+    font-size: 16px;
+    font-weight: 600;
+    color: $secondary;
+
+    .info {
+        padding-left: 2px;
+    }
+
+    .checkmarks {
+        .list-item {
+            padding: 0 1.5px 3px 1.5px;
+        }
+
+        /deep/ .icon-group {
+            position: relative;
+            left: 3px;
+            @include translateY(-22%);
+
+            .icon {
+                fill: $secondary;
+                height: 12px;
+            }
+        }
+    }
+
+    &.empty {
+        color: $light-default;
+
+        .checkmarks {
+            .list {
+                &.has-gradient {
+                    -webkit-mask-image: -webkit-gradient(linear, left center, right center, from(rgba(0, 0, 0, .4)), to(rgba(0, 0, 0, .4)));
+                }
+            }
+        }
+    }
+
+    &:not(.empty) {
+        .checkmarks {
+            position: relative;
+            
+            .list {
+                position: relative;
+                    z-index: 1;
+                    -webkit-mask-image: -webkit-gradient(linear, left center, 
+                    right center, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+                    &:not(.mask) {
+                }
+            
+                &.mask {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    z-index: 0;
+                    -webkit-mask-image: none;
+
+                    /deep/ .icon-group {
+            
+                        .icon {
+                            fill: #d3d9da;
+                        }
+                    }
+                }
+            }
+        }   
+    }
+
+    .label {
+        display: block;
+        padding-left: 2px;
+        -webkit-mask-image: -webkit-gradient(linear, left center, 
+        right center, from(rgba(0,0,0,0.4)), to(rgba(0,0,0,0.4)));
+    }
+
+    @media (max-width: 767px) {
+        & {
+            font-size: 16px;
+
+            .checkmarks {
+                .list-item {
+                    padding-left: 2px;
+                    padding-right: 2px;
+                }
+
+                /deep/ .icon-group {
+                    left: 22%;
+                    @include translateY(-23%);
+                    
+                    .icon {
+                        height: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 479px) {
+        & {
+            font-size: 14px;
+
+            .checkmarks {
+                .list-item {
+                    padding-left: 1px;
+                    padding-right: 1px;
+                }
+
+                /deep/ .icon-group {
+                    left: 22%;
+                    @include translateY(-23%);
+                    
+                    .icon {
+                        height: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+}

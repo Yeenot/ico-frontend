@@ -1,0 +1,72 @@
+.sale {
+    .type {
+        font-weight: 600;
+        text-transform: capitalize;
+        margin-bottom: 5px;
+
+        &.crowdsale {
+            color: #26ae88;
+        }
+
+        &.presale {
+            color: #e95160;
+        }
+    }
+
+    .done {
+        font-weight: 600;
+        text-transform: capitalize;
+
+        &.started {
+            color: $primary;
+        }
+
+        &.ended {
+            color: #db507a;
+        }
+    }
+
+    @media (max-width: 767px) {
+        /deep/ .countdown {
+            margin-top: 5px;
+
+            .wrapper {
+                .list-item {
+                    margin-left: 4px;
+                    margin-right: 4px;
+
+                    .digit {
+                        font-size: 18px;
+                    }
+
+                    .text {
+                        font-size: 12px;
+                    }
+
+                    &:after {
+                        font-size: 18px;
+                        top: 0px;
+                        right: -6px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 479px) {
+        /deep/ .countdown {
+            .wrapper {
+                .list-item {
+
+                    .digit {
+                        font-size: 16px;
+                    }
+
+                    .text {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,98 @@
+.piece {
+    box-sizing: content-box;
+    position: relative;
+    padding: 22px 25px 20px 65px;
+    font-size: 15px;
+    font-weight: 500;
+
+    .heading {
+        @include flex-container();
+
+        .text {
+            @include flex(1);
+            padding-top: 2px;
+        }
+
+        .info {
+            font-weight: 500;
+            color: $light-default;
+            padding-top: 2px;
+            max-width: 50%;
+            text-align: right;
+
+            .value {
+                font-weight: 600;
+                color: $tertiary;
+            }
+        }
+
+        .action {
+            display: none;
+            position: absolute;
+            top: 12px;
+            right: 25px;
+            font-size: 35px;
+            font-weight: 300;
+            color: #cfdefb;
+            transition: all 0.2s ease-out;
+        }
+
+        /deep/ .icon-group {
+            position: absolute;
+            top: 22px;
+            left: 20px;
+            text-align: center;
+
+            .icon {
+                fill: $primary;
+                height: 20px;
+            }
+        }
+    }
+
+    &.has-action {
+        padding-right: 70px !important;
+
+        .action {
+            display: block;
+        }
+    }
+
+    .description {
+        font-size: 13px;
+        font-weight: 500;
+        color: #9497a6;
+        margin-top: 5px;
+    }
+
+    @media (max-width: 767px) {
+        & {
+            font-size: 14px;
+            padding: 15px 25px 15px 45px;
+
+            .heading {
+                /deep/ .icon-group {
+                    top: 15px;
+                    left: 10px;
+                    .icon {
+                        height: 17px;
+                    }
+                }
+
+                .info {
+                    font-size: 13px;
+                }
+
+                .action {
+                    font-size: 32px;
+                    top: 8px;
+                    right: 10px;
+                }
+            }
+
+            &.has-action {
+                padding-right: 40px !important;
+            }
+        }
+    }
+}

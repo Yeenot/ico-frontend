@@ -1,0 +1,36 @@
+.blogs {
+    margin: 0 -7px;
+
+    .column {
+        padding: 0 7px 20px;
+    }
+
+    /deep/ .blog {
+        .img-container {
+            img {
+                max-height: 170.33px;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+
+        /deep/ .blog {
+            .img-container {
+                img {
+                    max-height: 218px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 479px) {
+        /deep/ .blog {
+            .img-container {
+                img {
+                    max-height: 100%;
+                }
+            }
+        }
+    }
+}

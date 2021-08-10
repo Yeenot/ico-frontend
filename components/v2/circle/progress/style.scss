@@ -1,0 +1,58 @@
+.progress.circle {
+    position: relative;
+    font-size: 30px;
+    line-height: 1;
+
+    &.clickable {
+
+        .inner {
+            cursor: pointer;
+        }
+    }
+
+    .inner {
+        position: relative;
+        width: 1em;
+        height: 1em;
+    }
+
+    
+
+    .svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        @include rotate(-90deg);
+    }
+
+    .content {
+        @include flex-container();
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        margin: auto;
+        font-size: 0.2em;
+        color: $light-default;
+        @include transition-property(all);
+        @include transition-duration(0.2s);
+        @include transition-timing-function(ease-out);
+
+        .inner-content {
+            @include flex(1);
+            text-align: center;
+            white-space: pre-wrap;      /* CSS3 */   
+            white-space: -moz-pre-wrap; /* Firefox */    
+            white-space: -pre-wrap;     /* Opera <7 */   
+            white-space: -o-pre-wrap;   /* Opera 7 */    
+            word-wrap: break-word;      /* IE */
+            word-break:break-all;
+        }
+    }
+}

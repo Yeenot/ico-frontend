@@ -1,0 +1,139 @@
+header {
+    color: $light-default;
+    text-transform: uppercase;
+
+    .logo-wrapper {
+        .logo,
+        .mobile-logo {
+            max-width: 230px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .container {
+        background-color: #ffffff;
+        border-bottom: 1px solid #e4eaeb;
+        padding: 20px 15px 19px 15px;
+    }
+
+    #telegram-channel {
+        color: $default;
+        font-weight: 500;
+
+        a {
+            color: inherit;
+            /deep/ .icon-group.telegram {
+                .icon {
+                    height: 14px;
+                }
+            }
+        }
+    }
+
+    .first-row {
+        margin-bottom: 16px;
+    }
+
+    .first-row,
+    .second-row {
+        @include flex-container();
+
+        .left, .right {
+            @include flex(1);
+        }
+
+        .middle {
+            @include flex(0 0 225px);
+            padding-left: 20px;
+            padding-right: 20px;
+            white-space: nowrap;
+        }
+    }
+
+    .status {
+        margin-left: -10px;
+
+        .list-item {
+            font-weight: 500;
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+            padding-bottom: 5px;
+            
+            .count {
+                font-size: 16px;
+                font-weight: 600;
+                color: $secondary;
+            }
+        }
+    }
+
+    .media.list {
+        float: right;
+
+        /deep/ {
+            
+            .list-item {
+                padding-left: 0;
+                padding-right: 0;
+                margin-right: 0;
+
+                & + .list-item {
+                    margin-left: 22px;
+                }
+
+                .icon {
+                    fill: $secondary;
+                    height: 16px;
+
+                    .svg-wrapper {
+                        position: relative;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+
+                .icon-group.facebook {
+                    .icon {
+                        .svg-wrapper {
+                            height: 16px;
+                        }
+                    }
+                }
+                
+                .icon-group.twitter {
+                    .icon {
+                        .svg-wrapper {
+                            height: 12px;
+                        }
+                    }
+                }
+
+                .icon-group.telegram {
+                    .icon {
+                        .svg-wrapper {
+                            height: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media #{$phone} {
+        & {
+            #telegram-channel {
+                padding-left: 0 !important;
+            }
+
+            .first-row,
+            .second-row {
+
+                .middle {
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+            }
+        }
+    }
+}

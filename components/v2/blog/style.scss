@@ -1,0 +1,35 @@
+.blog {
+    border: 1px solid #e8ecef;
+    @include border-radius(4px);
+    padding: 14px 16px;
+
+    .img-container {
+        margin-bottom: 10px;
+
+        img {
+            max-height: 200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .info {
+        .name {
+            font-weight: 600;
+            color: #262626;
+        }
+
+        .description {
+            font-weight: 500;
+            margin-top: 8px;
+        }
+    }
+
+    .actions {
+        text-align: right;
+
+        a {
+            font-weight: 600;
+        }
+    }
+}

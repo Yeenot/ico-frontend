@@ -1,0 +1,90 @@
+.detail {
+    line-height: 1.15;
+
+    .title {
+        font-size: 12px;
+        text-transform: uppercase;
+        color: $light-default;
+        padding-top: 25px;
+        margin-bottom: 10px;
+    }
+
+    .subtitle {
+        font-size: 23px;
+        font-weight: 700;
+        color: $primary;
+        margin-bottom: 10px;
+
+        a {
+            color: inherit;
+        }
+    }
+
+    .description {
+        line-height: 1.61;
+        margin-bottom: 10px;
+    }
+
+    .view {
+        color: $tertiary;
+        vertical-align: middle;
+        cursor: pointer;
+
+        .text {
+            float: left;
+            margin-right: 5px;
+        }
+
+        /deep/ .icon-group {
+            float: left;
+            position: relative;
+            top: -2px;
+
+            .icon {
+                fill: $tertiary;
+                height: 15px;
+
+                .description {
+                    line-height: 1.61;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
+    .boxed {
+        margin-bottom: 12px;
+
+        .value {
+            display: inline-block;
+            max-width: 100%;
+            padding: 5px 7px;
+            background-color: #f6fbfd;
+            color: $light-default;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .title {
+            padding-top: 15px;
+        }
+
+        .subtitle {
+            font-size: 21px;
+        }
+    
+        .view {
+            /deep/ .icon-group {
+                .icon {
+                    height: 14px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        .subtitle {
+            font-size: 16px;
+        }
+    }
+}

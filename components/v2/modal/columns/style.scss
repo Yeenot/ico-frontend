@@ -1,0 +1,104 @@
+:root {
+    .slick-item {
+        position: relative;
+        z-index: 9999;
+        background-color: #fff;
+        border-bottom: 1px solid #efefef;
+        padding: 7px 10px;
+        font-size: 12px;
+        font-weight: 500;
+        cursor: pointer;
+
+        .fa-bars {
+            color: #728499;
+            margin-right: 5px;
+        }
+
+        .delete {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #f89a9a;
+            cursor: pointer;
+        }
+
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+}
+
+.add-column {
+    padding: 20px 15px;
+
+    .flex-container {
+        margin-left: -7px;
+        margin-right: -7px;
+
+        .col {
+            padding-left: 7px;
+            padding-right: 7px;
+        }
+    }
+
+    .selected {
+        max-height: 345px;
+        overflow-y: auto;
+
+        .slick-list {
+            background-color: #f3f3f3;
+            border: 1px solid #efefef;
+
+            .slick-item {
+                z-index: 1;
+
+                .delete {
+                    z-index: 2;
+                }
+            }
+        }
+    }
+
+    .categories {
+        height: 300px;
+        margin-top: 10px;
+        overflow-y: auto;
+
+        /deep/ .accordion {
+            .list {
+                margin-top: 0;
+                margin-bottom: 0;
+
+                .accordion-item {
+                    .piece {
+                        font-size: 12px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        padding: 7px 10px;
+
+                        .heading {
+
+                            .action {
+                                font-size: 25px;
+                                font-weight: 300;
+                                top: 1px;
+                                right: 10px;
+                            }
+                        }
+                    }
+
+                    .content {
+                        .inner-content {
+                            padding: 5px 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .actions {
+        margin-top: 40px;
+        text-align: center;
+    }
+}

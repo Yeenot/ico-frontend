@@ -1,0 +1,148 @@
+#social {
+    h1 {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .selection {
+        margin-left: -7px;
+        margin-right: -7px;
+        justify-content: center;
+        font-weight: 600;
+
+        .column {
+            padding-left: 7px;
+            padding-right: 7px;
+        }
+
+        .type {
+            background-color: #fafbfd;
+            border: 1px solid #d6d9dc;
+            @include border-radius(4px);
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            @include transition(all .2s ease-in-out);
+            color: #728499;
+            text-align: center;
+            text-transform: uppercase;
+
+            &.selected {
+                color: #4093c7;
+                @include box-shadow(0px 10px 24px 0px rgba(206, 201, 201, 0.75));
+            }
+        }
+    }
+
+    .filter {
+        margin-top: 40px;
+        /deep/ .dropdown {
+            button {
+                font-size: 12px;
+                padding: 7px 20px 7px 10px;
+            }
+
+            .dropdown-menu {
+                font-size: 12px;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .bar-chart {
+        margin-top: 40px;
+        
+        h2 {
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+    }
+
+    .icos {
+        margin-top: 60px;
+        max-width: 750px;
+        margin-left: auto;
+        margin-right: auto;
+
+        h2 {
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+        
+        /deep/ .my-table {
+            thead {
+                th {
+                    background-color: #ebf2f5;
+                    font-size: 14px;
+                    font-weight: 600;
+                    cursor: pointer;
+
+                    &:last-child {
+                        width: 150px;
+                    }
+
+                    .fa {
+                        margin-left: 2px;
+                    }
+                }
+            }
+
+            tbody {
+                tr {
+                    td {
+                        cursor: pointer;
+                    }
+
+                    &:hover {
+                        td {
+                            background-color: #dcedf7;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 479px) {
+        & {
+            .selection {
+
+                .column {
+                    padding-left: 2px;
+                    padding-right: 2px;
+                }
+
+                .type {
+                    font-weight: 500;
+                    padding: 8px 7px;
+                    margin-bottom: 7px;
+                }
+            }
+
+            .filter {
+                margin-top: 20px;
+            }
+            
+            .bar-chart {
+                margin-top: 30px;
+            }
+
+            .icos {
+                /deep/ .my-table {
+                    thead {
+                        th {
+                            font-size: 13px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

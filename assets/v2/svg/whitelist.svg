@@ -1,0 +1,12 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+  <title>whitelist</title>
+  <g>
+    <rect class="cls-1" x="4" y="5" width="6" height="2"/>
+    <rect class="cls-1" x="4" y="9" width="6" height="2"/>
+    <rect class="cls-1" x="4" y="13" width="6" height="2"/>
+    <path class="cls-1" d="M2,19H16V1H2ZM4,3H14V17H4Z" transform="translate(-2)"/>
+    <polygon class="cls-1" points="18 20 20 17 16 17 18 20"/>
+    <rect class="cls-1" x="16" y="4" width="4" height="11"/>
+    <path class="cls-1" d="M20,0a2,2,0,0,0-2,2h4A2,2,0,0,0,20,0Z" transform="translate(-2)"/>
+  </g>
+</svg>

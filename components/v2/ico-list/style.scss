@@ -1,0 +1,278 @@
+.icos {
+    /deep/ .my-table {
+        padding-left: 5px;
+
+        .wrapper {
+            padding-left: 5px;
+        }
+
+        .clone-wrapper {
+            margin-left: -5px;
+            padding-left: 5px;
+        }
+
+        .table {
+            table-layout: fixed;
+            width: 100%;
+
+            thead {
+                tr {
+                    th {
+                        position: relative;
+                        background-color: #ebf2f5;
+                        padding: 12px 25px 12px 10px;
+                        text-align: center;
+                        word-break: break-all;
+                        cursor: pointer;
+
+                        .sort {
+                            position: absolute;
+                            top: 50%;
+                            @include transform(translateY(-50%));
+                            right: 23px;
+                            cursor: pointer;
+                        }
+
+                        .delete {
+                            position: absolute;
+                            top: 50%;
+                            @include transform(translateY(-50%));
+                            right: 6px;
+                            color: #f89a9a;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+            tbody {
+                tr {
+                    cursor: pointer;
+                    
+                    td {
+                        position: relative;
+                        text-align: center;
+                        word-break: break-all;
+                    }
+
+                    &:not(.spacer) {
+                        .ribbon {
+                            display: none;
+                            position: absolute;
+                            top: 10px;
+                            left: -5px;
+                            overflow: visible;
+                            /* so we can see the pseudo-elements we're going to add to the anchor */
+                            
+                            font-size: 10px;
+                            font-weight: 400;
+                            /* font-size and line-height must be equal so we can account for the height of the banner */
+                            
+                            line-height: 10px;
+                              
+                              &:before {
+                                content: "";
+                                height: 0;
+                                width: 0;
+                                display: block;
+                                position: absolute;
+                                top: 2px;
+                                right: -1px;
+                                border-top: 12px solid rgba(0, 0, 0, 0.3);
+                                /* These 4 border properties create the first part of our drop-shadow */
+                                
+                                border-bottom: 12px solid rgba(0, 0, 0, 0.3);
+                                border-left: 11px solid rgba(0, 0, 0, 0.3);
+                                border-right: 12px solid transparent;
+                              }
+                              
+                              &:after {
+                                /* This adds the second part of our dropshadow */
+                                
+                                content: "";
+                                height: 2px;
+                                background: rgba(0, 0, 0, .3);
+                                display: block;
+                                position: absolute;
+                                bottom: -2px;
+                                right: 22px;
+                                left: 5px;
+                              }
+                              
+                              a {
+                                display: block;
+                                padding: 8px 8px 6px 12px;
+                                position: relative;
+                                /* allows us to position our pseudo-elements properly */
+                                
+                                background: #533e8b;
+                                overflow: visible;
+                                height: 24px;
+                                margin-right: 12px;
+                                color: #fff;
+                                text-decoration: none;
+        
+                                &:after {
+                                    /* this creates the "folded" part of our ribbon */
+                                    
+                                    content: "";
+                                    height: 0;
+                                    width: 0;
+                                    display: block;
+                                    position: absolute;
+                                    bottom: -7px;
+                                    left: 0;
+                                    border-top: 7px solid #392b5e;
+                                    border-left: 5px solid transparent;
+                                }
+        
+                                &:before {
+                                    /* this creates the "forked" part of our ribbon */
+                                    
+                                    content: "";
+                                    height: 0;
+                                    width: 0;
+                                    display: block;
+                                    position: absolute;
+                                    top: 0;
+                                    right: -12px;
+                                    border-top: 12px solid #533e8b;
+                                    border-bottom: 12px solid #533e8b;
+                                    border-right: 12px solid transparent;
+                                    border-left: 12px solid transparent;
+                                }
+                            }
+                        }
+                    }
+
+                    &.favourite {
+
+                        td {
+                            background-color: #eaeefe;
+
+                            &.name {
+                                padding-top: 45px;
+                            }
+                        }
+
+                        .ribbon {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    .field {
+
+        .column-label {
+            display: none;
+            text-align: left;
+        }
+    
+        &.name {
+            .value {
+                font-weight: 600;
+                color: $primary;
+                padding-bottom: 5px;
+            }
+        }
+    }
+    
+    .ico-logo {
+        width: 42px;
+        height: 42px;
+        margin: 0 auto 5px;
+    }
+
+    @media (max-width: 767px) {
+        & {
+            /deep/ .my-table {
+                padding-left: 0;
+
+                .wrapper {
+                    padding-left: 0;
+                }
+
+                .data-table {
+                    display: block;
+                    overflow: hidden;
+                }
+        
+                thead {
+                    display: none;
+                }
+        
+                tbody {
+                    @include flex-container();
+                    @include flex-wrap(wrap);
+                    margin: 0 -7px;
+        
+                    tr {
+                        @include flex(0 0 50%);
+                        display: block;
+                        padding: 0 7px 0 12px;
+                        margin-bottom: 15px;
+        
+                        td {
+                            display: block;
+                            width: 100%;
+        
+                            &:first-child {
+                                padding-top: 10px;
+                            }
+        
+                            &:last-child {
+                                padding-bottom: 10px;
+                            }
+                        }
+        
+                        &.spacer {
+                            display: none;
+                        }
+        
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        
+            .field {
+                @include flex-container();
+        
+                .column-label,
+                .column-value {
+                    @include flex(1);
+                }
+        
+                .column-label {
+                    display: block;
+                }
+        
+                .column-value.has-label {
+                    text-align: right;
+                    color: $tertiary;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 479px) {
+        & {
+            /deep/ .my-table {
+                tbody {
+                    @include flex-direction(column);
+                    @include flex-wrap(nowrap);
+
+                    tr {
+                        @include flex(1);
+                    }
+                }
+            }
+        }
+    }
+}
+

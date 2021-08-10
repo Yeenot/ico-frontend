@@ -1,0 +1,119 @@
+.page-labeller {
+    .content {
+        max-width: 980px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        padding-left: 40px;
+
+        .scrollbar {
+            position: absolute;
+            left: -15px;
+            top: 0;
+            bottom: 0;
+            cursor: pointer;
+            z-index: 1;
+
+            &:before {
+                content: "";
+                position: absolute;
+                width: 1px;
+                height: 100%;
+                background-color: #dee3e7;
+            }
+
+            .scroll {
+                position: absolute;
+                padding: 0 15px 0 0;
+
+                .bar {
+                    display: block;
+                    width: 2px;
+                    height: 115px;
+                    background-color: #0e90e4;
+                }
+            }
+        }
+
+        .scrollable {
+            position: relative;
+            height: 626px;
+            overflow-y: auto;
+            cursor: move;
+            -ms-overflow-style: none;  // IE 10+
+            overflow: -moz-scrollbars-none;  // Firefox
+
+            &::-webkit-scrollbar { 
+                display: none; 
+            }
+        }
+
+        .note {
+            position: absolute;
+            z-index: 1;
+
+            /deep/ .progress {
+                .icon-group {
+                    .icon {
+                        fill: #25ae88;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        & {
+            .content {
+                padding-left: 0;
+
+                .scrollbar {
+                    display: none;
+                }
+    
+                .scrollable {
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+.mini-popover {
+    position: absolute;
+    left: 0;
+    top: -10px;
+    z-index: 2;
+    left: 50%;
+    @include transform(translate(-50%, -100%));
+
+    .inner {
+        position: relative;
+        min-width: 150px;
+        background-color: #ffffff;
+        @include box-shadow(0px 10px 24px 0px rgba(206, 201, 201, 0.75));
+        @include border-radius (4px);
+        text-align: center;
+        font-size: 12px;
+        color: #645f5f;
+        padding: 10px;
+        
+    }
+
+    .arrow {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        border-color: #ffffff;
+        border-width: 5px 5px 0 5px;
+        border-left-color: transparent !important;
+        border-right-color: transparent !important;
+        border-bottom-color: transparent !important;
+        bottom: -5px;
+        z-index: 1;
+    }
+}

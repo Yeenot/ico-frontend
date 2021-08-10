@@ -1,0 +1,35 @@
+#welcome {
+    padding: 40px 15px 20px 15px;
+    line-height: 1.5;
+
+    h6 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 20px;
+        color: $primary;
+    }
+
+    .actions {
+        margin-top: 25px;
+        text-align: center;
+    }
+
+    @media (max-width: 767px) {
+        h6 {
+            font-size: 20px;
+        }
+    }
+
+    @media (max-width: 479px) {
+        & {
+            padding-top: 15px;
+            padding-bottom: 15px;
+
+            h6 {
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

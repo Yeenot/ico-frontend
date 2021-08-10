@@ -1,0 +1,30 @@
+.gallery {
+    margin-left: -11px;
+    margin-right: -11px;
+
+        .column {
+            padding-left: 11px;
+            padding-right: 11px;
+
+            .img-container {
+                margin-bottom: 15px;
+                cursor: pointer;
+
+                img {
+                    margin-left: auto;
+                    margin-right: auto;
+                    max-height: 143px;
+                }
+            }
+        }
+}
+
+@media #{$phone} {
+    .gallery {
+            .column {
+                .img-container {
+                    margin-bottom: 25px;
+                }
+            }
+    }
+}

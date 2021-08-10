@@ -1,0 +1,42 @@
+.icon-group {
+    line-height: 1;
+
+    .icon {
+        fill: $primary;
+        height: $default-font-size;
+        font-size: 0;
+        display: inline-block;
+        max-width: 100%;
+        vertical-align: middle;
+
+        .svg-wrapper {
+            display: block;
+            height: inherit;
+            position: relative;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+
+            /deep/ svg {
+                height: inherit;
+            }
+        }
+    }
+
+    .slot {
+        position: relative;
+        top: 2px;
+    }
+
+    &.has-slot {
+
+        .icon {
+            margin-right: 12px;
+        }
+    }
+
+    &:not(.has-slot) {
+        font-size: 0;
+    }
+    
+}

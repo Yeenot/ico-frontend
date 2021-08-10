@@ -1,0 +1,67 @@
+.autocomplete {
+    position: relative;
+
+    input {
+        font-size: 13px;
+        text-transform: uppercase;
+    }
+
+    .addon {
+        padding: 10px;
+
+        /deep/ {
+            .list {
+                .list-item {
+                    padding-left: 4px;
+                    padding-right: 4px;
+                }
+            }
+
+            .icon-group.close {
+                .icon {
+                    .svg-wrapper {
+                        fill: #c7cacb !important;
+                        height: 12px !important;
+                    }
+                }
+            }
+        }
+    }
+    
+    /deep/ .results.list {
+        position: absolute;
+        top: 45px;
+        left: 0;
+        z-index: 9;
+        min-width: 180px;
+        padding: 8px 0;
+        background-color: #ffffff;
+        border: 1px solid #e4eaeb;
+        @include border-radius(4px);
+
+        .list-item {
+            margin-bottom: 0;
+            text-transform: uppercase;
+            cursor: pointer;
+
+            .item {
+                padding: 5px 20px;
+            }
+            &:hover {
+                background-color: #f4f8f9;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+
+        input {
+            font-size: 12px;
+        }
+
+        .results {
+          left: 0;
+          right: 0;
+        }
+    }
+}

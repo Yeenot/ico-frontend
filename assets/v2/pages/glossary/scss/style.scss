@@ -1,0 +1,119 @@
+#glossary {
+    .selection {
+        font-size: 16px;
+        font-weight: 600;
+
+        .wrapper {
+            padding-top: 7px;
+            padding-bottom: 20px;
+
+            &.fixed {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                background-color: #f4f8f9;
+                
+    
+                .inner {
+                    overflow: hidden;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+        
+        .list {
+            margin-left: -5px;
+            margin-right: -5px;
+        }
+
+        
+
+        .letters {
+            /deep/ .list-item {
+                cursor: pointer;
+
+                &.selected,
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }
+
+    .introduction {
+        margin-top: 35px;
+
+        span {
+            font-size: 16px;
+            font-weight: 600;
+            color: $primary;
+        }
+    }
+
+    .keywords {
+        margin-top: 25px;
+
+        .group {
+            & + .group {
+                padding-top: 20px;
+            }
+        }
+
+        .keys {
+            /deep/ .list-item {
+                margin-bottom: 8px;
+            }
+        }
+
+        .letter {
+            font-size: 16px;
+            font-weight: 600;
+            color: $secondary;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .term {
+            .key {
+                h2 {
+                    font-size: 14px;
+                    float: left;
+                    padding-right: 3px;
+                }
+            }
+
+            .definition {
+                padding-left: 3px;
+
+                /deep/ a {
+                    display: inline;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 479px) {
+        & {
+
+            .introduction {
+                margin-top: 20px;
+
+                span {
+                    font-size: 14px;
+                }
+            }
+
+            .selection {
+                font-size: 14px;
+            }
+
+            .keywords {
+                .letter {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

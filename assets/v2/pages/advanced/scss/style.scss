@@ -1,0 +1,159 @@
+#advanced {
+    .intro {
+        max-width: 991px;
+        margin: 0 auto 50px;
+        text-align: center;
+    }
+
+    .filters {
+        margin-bottom: 10px;
+
+        .left {
+            padding-right: 15px;
+        }
+
+        .status-list {
+            max-width: 818px;
+            font-size: 13px;
+            color: #728499;
+            text-transform: uppercase;
+            margin: 0 -4px;
+            justify-content: left;
+    
+            .column {
+                padding-left: 4px;
+                padding-right: 4px;
+    
+                .status {
+                    background-color: #fafbfd;
+                    border: 1px solid #d6d9dc;
+                    @include border-radius(4px);
+                    padding: 7px 10px;
+                    margin-bottom: 10px;
+                    cursor: pointer;
+                    @include transition(all .2s ease-in-out);
+                    text-align: center;
+    
+                    &.selected {
+                        color: #4093c7;
+                        @include box-shadow(0px 10px 24px 0px rgba(206, 201, 201, 0.75));
+                    }
+                }
+            }
+        }
+    
+        .add-column {
+            button {
+                position: relative;
+                z-index: 1;
+                margin-bottom: 0;
+                font-size: 13px;
+                font-weight: 600 !important;
+                padding: 12px 25px !important;
+                color: #fafbfd;
+                text-transform: uppercase;
+                background: -moz-linear-gradient( -38deg, rgb(28,45,101) 0%, rgb(83,62,139) 100%);
+                background: -webkit-linear-gradient( -38deg, rgb(28,45,101) 0%, rgb(83,62,139) 100%);
+                background: -ms-linear-gradient( -38deg, rgb(28,45,101) 0%, rgb(83,62,139) 100%);
+                background: linear-gradient( -38deg, rgb(28,45,101) 0%, rgb(83,62,139) 100%);
+                @include border-radius(4px);
+                border: 0;
+                text-align: center;
+    
+                &:after {
+                    position: absolute;
+                    content: "";
+                    width: 50%;
+                    height: 50%; /* Half of the original height */
+                    left:0;
+                    right: 0;
+                    bottom: 8px;
+                    margin: 0 auto;
+                    @include border-radius(50%);
+                    @include box-shadow(0px 10px 24px 0px rgb(28,45,101));
+                    z-index: -1;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        & {
+            .status-list {
+                .column {
+                    @include flex(0 0 20%);
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 767px) {
+        & {
+            .filters {
+                @include flex-direction(column);
+                padding: 0;
+                background-color: transparent;
+                border: 0;
+
+                .left {
+                    padding-right: 0;
+                }
+
+                .status-list {
+                    font-size: 14px;
+                    margin-bottom: 8px;
+                    margin: 0;
+                    @include flex-wrap(nowrap);
+                    justify-content: center;
+
+                    .column {
+                        padding-left: 4px;
+                        padding-right: 4px;
+
+                        .status {
+                            padding: 10px 10px;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+
+                .add-column {
+                    display: none;
+                }
+            }
+
+            /deep/ .sale {
+                text-align: center;
+            }
+        }
+    }
+
+    @media (max-width: 479px) {
+        & {
+
+            .intro {
+                h1 {
+                    font-size: 14px;
+                }
+            }
+
+            .filters {
+                .status-list {
+                    font-size: 12px;
+                    @include flex-wrap(wrap);
+                    align-items: center;
+
+                    .column {
+                        padding-left: 2px;
+                        padding-right: 2px;
+
+                        .status {
+                            padding: 8px 7px;
+                            margin-bottom: 7px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

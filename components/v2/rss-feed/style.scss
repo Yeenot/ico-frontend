@@ -1,0 +1,95 @@
+.rss-wrapper {
+    position: fixed;
+    left: auto;
+    right:15px;
+    bottom: 0;
+    z-index: 7;
+
+    .feed {
+        width: 350px;
+        background-color: #fff;
+        border-top-left-radius: 4px;	
+        border-top-right-radius: 4px;
+        -webkit-box-shadow: 0px 0px 2px 0px rgba(50, 50, 50, 0.75);
+        -moz-box-shadow:    0px 0px 2px 0px rgba(50, 50, 50, 0.75);
+        box-shadow:         0px 0px 2px 0px rgba(50, 50, 50, 0.75);
+        overflow: hidden;
+
+        .box {
+            background-color: #fff;
+            
+            .heading {
+                color: #fff;
+                text-transform: uppercase;
+                padding: 4px 0 4px 15px;
+                background-color: #18244c;
+                overflow: hidden;
+
+                h5 {
+                    font-size: 13px;
+                    padding-right: 15px;
+                }
+
+                .exit {
+                    padding: 4px 6px;
+                    cursor: pointer;
+                    margin: 4px 6px 0 0;
+                }
+            }
+
+            .content {
+                height: 358px;
+                padding: 20px 15px;
+                overflow-y: auto;
+
+                .list {
+                    .item {
+                        position: relative;
+
+                        & + .item {
+                            margin-top: 20px;
+                        }
+
+                        .banner {
+                            width: 36px;
+                            height: 36px;
+                            cursor: pointer;
+                            position: absolute;
+                            overflow: hidden;
+
+                            img {
+                                width: 100%;
+                                height: auto;
+                            }
+                        }
+
+                        h6 {
+                            font-size: 13px;
+                            margin-top: 0;
+                            margin-bottom: 2px;
+                    
+                            cursor: pointer;
+                        }
+
+                        .info {
+                            padding-left: 46px;
+                            padding-top: 3px;
+                            white-space: normal;
+                            word-break: break-all;
+                        }
+
+                        .published {
+                            font-size: 11px;
+                            font-style: italic;
+                        }
+
+                        .description {
+                            font-size: 12px;
+                            margin-top: 7px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,1 @@
+hj('trigger', 'detailheatmap');

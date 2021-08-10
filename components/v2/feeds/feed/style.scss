@@ -1,0 +1,168 @@
+.feed {
+    @include flex-container();
+    justify-content: flex-end;
+
+    .box {
+        position: relative;
+        width: 320px;
+        background-color: #fff;
+        @include border-radius(2px 2px 0 0);
+        @include box-shadow(0px 10px 20px 0px rgba(228, 234, 235, .75));
+        overflow: hidden;
+        z-index: 2;
+
+        .header {
+            position: relative;
+            font-size: 13px;
+            font-weight: 500;
+            color: #fff;
+            text-transform: capitalize;
+            padding: 7px 21px 7px 10px;
+            background-color: $secondary;
+            overflow: hidden;
+
+            .exit {
+                position: absolute;
+                right: 10px;
+                cursor: pointer;
+            }
+        }
+
+        .content {
+            font-size: 11px;
+            line-height: 1.4;
+                        
+            height: 320px;
+            padding: 15px 10px;
+            overflow-y: auto;
+
+            /deep/ {
+                .list {
+                    .list-item {
+                        margin-bottom: 20px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+
+                .item {
+                    .info {
+                        position: relative;
+                        padding-left: 40px;
+                        padding-top: 4px;
+                        white-space: normal;
+                        word-break: break-all;
+                
+                        .img-container {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            
+                            img {
+                                width: 30px;
+                                height: 30px;
+                                @include border-radius(50%);
+                            }
+                        }
+                
+                        h6 {
+                            font-size: 12px;
+                            font-weight: 500;
+                            margin-top: 0;
+                            margin-bottom: 2px;
+                            text-transform: capitalize;
+                
+                            a {
+                                color: inherit;
+                            }
+                        }
+                
+                        .timestamp {
+                            font-size: 10px;
+                            font-style: italic;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    button {
+        position: relative;
+        border: 1px solid $secondary;
+        @include border-radius(2px 2px 0 0);
+        padding: 10px 12px 10px 31px;
+        background-color: $secondary;
+        color: #ffffff;
+        margin-bottom: 0;
+        text-transform: capitalize;
+        cursor: pointer;
+
+        /deep/ .icon-group {
+            position: absolute;
+            left: 12px;
+
+            .icon {
+                fill: #ffffff !important;
+                height: 12px;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        & {
+            .box {
+                position: fixed;
+                bottom: 0;
+                right: 15px;
+
+                .header {
+                    font-size: 12px;
+                }
+
+                .content {
+                    height: 280px;
+                }
+            }
+
+            button {
+                padding: 10px 15px;
+                line-height: 12px;
+
+                /deep/ .icon-group {
+                    position: static;
+                    left: 0;
+                }                
+
+                .text {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        & {
+            .box {
+                width: auto;
+                left: 15px;
+
+                .content {
+                    height: 250px;
+                }
+            }
+
+            button {
+                padding: 8px 12px;
+
+                /deep/ .icon-group {
+                    .icon {
+                        height: 10px;
+                    }
+                }                
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.overlay {
+    position: relative;
+
+    .front {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+
+        .action {
+            position: absolute;
+            top: 25px;
+            right: 32px;
+            z-index: 2;
+
+            /deep/ .icon-group {
+                cursor: pointer;
+
+                .icon {
+                    fill: #ffcf3b;
+                    height: 20px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        .front {
+            .action {
+                top: 15px;
+                right: 10px;
+    
+                /deep/ .icon-group {
+                    .icon {
+                        height: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

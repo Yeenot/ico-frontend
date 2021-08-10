@@ -1,0 +1,33 @@
+.newsletter-modal {
+    font-size: 14px;
+    padding: 20px 15px;
+
+    h6 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-top: 40px;
+        margin-bottom: 30px;
+        color: $secondary;
+    }
+
+    .content {
+        line-height: 1.6;
+    }
+
+    /deep/ .list {
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        .list-item {
+            .icon {
+                fill: $secondary;
+                height: 16px;
+            }
+        }
+    }
+
+    .actions {
+        margin-top: 40px;
+        text-align: center;
+    }
+}

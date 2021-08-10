@@ -1,0 +1,135 @@
+.progress-line-item {
+    position: relative;
+    padding-right: 14px;
+    margin-bottom: 0 !important;
+
+    .line {
+      display: none;
+    }
+
+    &:not(:first-child) {
+      padding-top: 46px;
+
+      .line {
+        position: absolute;
+        top: -7px;
+        bottom: 0;
+        left: 0;
+        display: block;
+  
+        .inner {
+          display: block;
+          width: 0;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          border-width: 0 0 0 2px;
+          border-style: solid;
+          border-color: #db507a;
+        }
+      }
+    }
+
+    .event {
+      padding-left: 25px;
+      
+      .text {
+        display: inline-block;
+        max-width: 100%;
+        padding: 12px 20px 12px 10px;
+        font-weight: 800;
+        color: $light-default;
+        position: relative;
+        border: 1px solid #ffffff;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        .sign-post, .mask {
+          display: block;
+          position: absolute;
+          left: auto;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-right-width: 0;
+        }
+
+        .mask {
+          top: -1px;
+          right: -15px;
+          border-left-width: 14px;
+          border-color: transparent;
+          transition: border 0.3s ease;
+        }
+
+        .sign-post {
+          top: 0;
+          right: -14px;
+          border-left-width: 14px;
+          border-color: transparent transparent transparent #ffffff;
+        }
+      }
+    }
+
+
+    &.past {
+      .text {
+        color: $light-default;
+      }
+    }
+
+    &.upcoming,
+    &.active {
+      .text {
+        color: $dark;
+      }
+    }
+
+    &.selected {
+      .text {
+        color: $primary;
+        border-color: #e4eaeb;
+        transform: translateX(10px);
+
+        .mask {
+          border-left-color: #e4eaeb;
+        }
+  
+        .sign-post {
+          border-left-color: #ffffff;
+        }
+      }
+      
+    }
+
+    /deep/ .v-popover {
+      position: absolute !important;
+      float: none;
+      left: 0;
+      bottom: 7px;
+
+      .icon-group {
+        .icon {
+          fill: #db507a;
+          height: 11px;
+          position: relative;
+          left: 0;
+        }
+      }
+    }
+
+    &.active,
+    &.upcoming {
+      /deep/ .v-popover {
+        .icon-group {
+          .icon {
+            fill: $active;
+          }
+        }
+      }
+    }
+  }

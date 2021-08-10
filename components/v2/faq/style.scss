@@ -1,0 +1,119 @@
+.fade-leave-active {
+    position: absolute;
+}
+
+.faq {
+    font-size: 12px;
+    font-weight: 500;
+    color: #a1a3a4;
+    line-height: 1.2;
+
+    .questions {
+        border-right: 1px solid #dee3e7;
+        padding-top: 10px;
+        padding-bottom: 65px;
+
+        /deep/ .list {
+            .list-item {
+                .question {
+                    position: relative;
+                    padding: 5px 15px 5px 0;
+                    cursor: pointer;
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        right: -1px;
+                        top: 0;
+                        bottom: 0;
+                        width: 2px;
+                        background-color: #0e90e4;
+                        display: none;
+                    }
+
+                    &.selected {
+                        color: #262626;
+
+                        &:after {
+                            display: block;
+                        }
+                    }
+
+                    
+                }
+
+                & + .list-item {
+                    margin-top: 24px;
+                }
+            }
+        }
+    }
+
+    .bottom {
+        position: relative;
+        text-align: center;
+
+        &.on-whole {
+            margin-top: 20px;
+            display: none;
+        }
+    }
+
+    .left {
+        max-width: 270px;
+
+        .bottom {
+            top: -10px;
+        }
+    }
+
+    .right {
+        padding-left: 20px;
+    }
+
+    .box {
+        background-color: #f6fafd;
+        color: #868889;
+        padding: 20px 15px;
+        border: 1px solid #e8ecef;
+    }
+
+    @media (max-width: 767px) {
+        & {
+            .questions {
+                padding-bottom: 42px;
+            }
+        }
+    }
+
+    @media (max-width: 479px) {
+        & {
+            .left {
+                max-width: 100px;
+            }
+
+            .questions {
+                padding-bottom: 10px;
+            }
+
+            .box {
+                padding: 15px 10px;
+            }
+
+            .bottom {
+
+                &.on-left {
+                    display: none;
+                }
+
+                &.on-whole {
+                    display: block;
+                }
+            }
+
+            .right {
+                padding-left: 10px;
+            }
+        }
+    }
+}

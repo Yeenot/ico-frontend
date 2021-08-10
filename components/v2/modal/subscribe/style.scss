@@ -1,0 +1,41 @@
+.subscribe-modal {
+    font-size: 14px;
+    padding: 40px 15px 20px 15px;
+
+    h6 {
+        font-size: 15px;
+        font-weight: 500;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        span {
+            font-size: 18px;
+        }
+    }
+
+    .name {
+        font-size: 24px;
+        font-weight: 700;
+        color: $secondary;
+    }
+
+    .actions {
+        margin-top: 40px;
+        text-align: center;
+        
+        .list {
+            display: inline-block;
+        }
+    }
+
+    .status {
+        background-color: #fdffe5;
+        color: $default;
+        border: 1px solid #ffcf3b;
+        padding: 20px 15px;
+
+        .name {
+            font-size: 16px;
+        }
+    }
+}

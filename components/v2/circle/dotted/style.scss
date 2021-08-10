@@ -1,0 +1,44 @@
+.dotted-circle {
+    position: relative;
+    border-radius: 50%;
+    border-style: dotted;
+
+    &.clickable {
+        cursor: pointer;
+    }
+
+    // center circle to its parent
+    &.center{
+        float: none;
+        margin: 0 auto;
+    }
+
+    .content {
+        @include flex-container();
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        margin: auto;
+        font-size: 0.2em;
+        color: $light-default;
+        @include transition-property(all);
+        @include transition-duration(0.2s);
+        @include transition-timing-function(ease-out);
+
+        .inner-content {
+            @include flex(1);
+            text-align: center;
+            white-space: pre-wrap;      /* CSS3 */   
+            white-space: -moz-pre-wrap; /* Firefox */    
+            white-space: -pre-wrap;     /* Opera <7 */   
+            white-space: -o-pre-wrap;   /* Opera 7 */    
+            word-wrap: break-word;      /* IE */
+            word-break:break-all;
+        }
+    }
+}

@@ -1,0 +1,102 @@
+.accordion {
+    padding-top: 1px;
+    padding-bottom: 1px;
+
+    .list {
+        margin-top: 34px;
+        margin-bottom: 34px;
+    }
+
+    /deep/ .accordion-item {
+        background-color: transparent;
+        border: 1px solid;
+        border-color: #e1ebfb transparent #e1ebfb transparent;
+        position: relative;
+        overflow: hidden;
+        margin-top: -1px;
+        margin-bottom: -1px;
+
+        /deep/ .piece {
+            min-height: 20px;
+            cursor: pointer;
+
+            &:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: -1px;
+                height: 1px;
+                background-color: #e4eaeb;
+            }
+        }
+
+        .content {
+            background-color: #ffffff;
+            max-height: 0;
+            overflow: hidden;
+
+            .inner-content {
+                margin-top: 1px;
+                padding: 20px 68px;
+            }
+        }
+
+        &.open {
+            border-color: #e4eaeb;
+            z-index: 1;
+
+            .piece {
+                background-color: #f6fafc;
+
+                .info {
+                    display: none;
+                }
+
+                .action {
+                    color: $light-default;
+                    @include rotate(45deg);
+                }
+            }
+        }
+
+        &:not(.disabled) {
+            .piece {
+                .info {
+                    font-weight: 600;
+                    color: $tertiary;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+
+        .list {
+            margin-top: 25px;
+        }
+
+        /deep/ .accordion-item {
+            .piece {
+                min-height: 18px;
+            }
+
+            .content {
+                .inner-content {
+                    padding: 15px 20px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 479px) {
+
+        /deep/ .accordion-item {
+            .content {
+                .inner-content {
+                    padding: 15px;
+                }
+            }
+        }
+    }
+}

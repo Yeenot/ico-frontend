@@ -1,0 +1,70 @@
+.announcement {
+    position: relative;
+    background: url('/v2/images/announcement-bg.png') repeat-y left top;
+    background-color: #fdffe5;
+    @include background-size(cover);
+    border: 1px solid #ffcf3b;
+    font-size: 13px;
+    color: $default;
+    padding: 25px 32px 25px 178px;
+    line-height: 1.6em;
+
+    .content {
+        padding-left: 15px;
+        padding-right: 25px;
+    }
+
+    .remove {
+        position: absolute;
+        top: 22px;
+        right: 32px;
+
+        /deep/ .icon {
+            cursor: pointer;
+            fill: #ffcf3b;
+            height: 20px;
+        }
+    }
+
+    /deep/ .icon-group {
+
+        &.megaphone {
+            position: absolute;
+            left: 90px;
+            top: 25px;
+
+            .icon {
+                height: 56px;
+                fill: #ffcf3b;
+    
+                svg {
+                    .bulb {
+                        fill: #ff9427 !important;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        & {
+            padding-left: 98px !important;
+            padding-right: 30px !important;
+
+            /deep/ .icon-group {
+                &.megaphone {
+                    left: 30px;
+                }
+            }
+
+            .content {
+                padding-right: 15px;
+            }
+
+            .remove {
+                top: 10px;
+                right: 10px;
+            }
+        }
+    }
+}

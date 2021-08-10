@@ -1,0 +1,418 @@
+#home {
+    #hero {
+        background-image: url("/v2/images/hero.png");
+
+        /* Set a specific height */
+        height: 284px;
+
+        /* Position and center the image to scale nicely on all screens */
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+
+        .coin {
+            position: absolute;
+            top: 74px;
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
+
+        .content {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+            color: #ffffff;
+            text-align: center;
+            padding-left: 15px;
+            padding-right: 15px;
+
+            .inner {
+                max-width: 788px;
+                margin-left: auto;
+                margin-right: auto;
+
+                h1 {
+                    max-width: 680px;
+                    margin: 0 auto;
+                    font-size: 48px;
+                    font-weight: 600;
+                    color: inherit;
+                    text-transform: uppercase;
+                }
+
+                h4 {
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 1.25;
+                    margin-top: 20px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    /deep/ {
+        button {
+            padding: 10px 16px;
+            font-weight: 700;
+        }
+
+        .bottom,
+        .actions {
+            button {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    section {
+        /deep/ {
+            .headline {
+                margin-bottom: 55px;
+                
+                h2 {
+                    font-size: 18px;
+                    padding-bottom: 8px;
+                }
+            }
+        }
+    }
+
+    section#newest-ico-reviews {
+        .division {
+            padding: 33px 40px 36px 40px;
+        }
+
+        .bottom {
+            margin-top: 45px;
+            text-align: center;
+        }
+
+        @media (max-width: 767px) {
+            .bottom {
+                margin-top: 45px;
+            }
+        }
+    }
+
+    section#how-to-read {
+
+        .division {
+            padding: 85px 40px 70px 40px;
+            
+            .headline {
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    section#faq {
+        margin-bottom: 40px;
+
+        .division {
+            padding-bottom: 32px;
+
+            .headline {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    section#related-articles {
+        .headline {
+            margin-bottom: 30px;
+        }
+    }
+
+    section#about,
+    section#disclaimer {
+        position: relative;
+
+        .background {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            
+            &:before {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-color: #fafbfd;
+            }
+
+            // &::after {
+            //     content: "";
+            //     display: block;
+            //     width: 100%;
+            //     height: 100%;
+            //     background-color: #ffffff;
+            // }
+        }
+
+        &#about {
+            .division {
+                padding: 20px 0 7px 0;
+            }
+        }
+
+        &#disclaimer {
+            .division {
+                padding: 7px 0 20px 0;
+            }
+        }
+
+        .division {
+            text-align: center;
+
+            button {
+                position: relative;
+                padding-right: 30px;
+                margin-bottom: 0;
+
+                /deep/ .icon-group {
+                    position: absolute;
+                    top: 50%;
+                    right: 10px;
+                    -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                    
+                    .icon {
+                        height: 6px;
+                    }
+
+                    &.open {
+                        .icon {
+                            @include rotate(180deg);
+                            @include transform-origin(50% 50%);
+                        }
+                    }
+                }
+            }
+
+            .about,
+            .disclaimer {
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 1.6;
+                margin-top: 15px;
+
+                .box {
+                    max-width: 1000px;
+                    margin: 0 auto;
+                    background-color: #ffffff;
+                    padding: 20px 15px;
+                    overflow: hidden;
+                }
+
+                h3 {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    section#about {
+        margin-top: 20px;
+
+        .division {
+            h3 {
+                font-size: 16px;
+                text-align: center;
+            }
+
+            .right {
+                margin: 40px auto 0 auto;
+            }
+
+            .left,
+            .right {
+                text-align: left;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+
+        & {
+            #hero {
+                height: 405px;
+
+                .coin {
+                    top: 65px;
+                    width: 170px;
+                }
+
+                .content {
+                    top: 58%;
+
+                    .inner {
+                        max-width: 554px;
+
+                        h1 {
+                            font-size: 36px;
+                            font-weight: 500;
+                            line-height: 1.3;
+                        }
+
+                        h4 {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+
+            section {
+                /deep/ {
+                    .headline {
+                        margin-bottom: 45px;
+                        
+                        h2 {
+                            font-size: 18px;
+                            padding-top: 0;
+                            padding-bottom: 4px;
+                            margin-left: auto;
+                            margin-right: auto;
+
+                            &:after {
+                                height: 2px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            /deep/ .bottom {
+                font-size: 12px;
+            }
+
+            section#newest-ico-reviews {
+                .division {
+                    padding-top: 22px;
+                    padding-bottom: 35px;
+                }
+            }
+
+            section#how-to-read {
+
+                .division {
+                    padding: 25px 0 35px 0;
+                    
+                    .headline {
+                        margin-bottom: 35px;
+                    }
+                }
+            }
+
+            section#faq {
+                margin-bottom: 40px;
+        
+                .division {
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+        
+                    .headline {
+                        margin-bottom: 45px;
+
+                        h2 {
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+
+            section#related-articles {
+
+                .headline {
+                    margin-bottom: 25px;
+                }
+            }
+
+            section#about,
+            section#disclaimer {
+
+                .background {
+                    &:before {
+                        height: 37px;
+                    }
+
+                }
+            }
+        }
+    }
+
+    @media (max-width: 479px) {
+
+        & {
+            #hero {
+                height: 200px;
+
+                .coin {
+                    top: 40px;
+                    width: 80px;
+                }
+
+                .content {
+                    top: 50%;
+
+                    .inner {
+                        max-width: 554px;
+
+                        h1 {
+                            font-size: 18px;
+                        }
+
+                        h4 {
+                            margin-top: 10px;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+
+            section {
+                .division {
+                    padding: 20px 15px !important;
+
+                    /deep/ {
+                        .headline {
+                            margin-bottom: 25px;
+                            
+                            h2 {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            section#about {
+        
+                .division {
+                    
+                    h3 {
+                        font-size: 14px;
+                    }
+
+                    .left {
+                        margin-top: 0;
+                    }
+
+                    .right {
+                        margin-top: 30px;
+                    }
+                }
+            }
+
+            /deep/ .bottom {
+                font-size: 10px;
+            }
+        }
+    }
+}

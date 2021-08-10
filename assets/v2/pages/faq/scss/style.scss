@@ -1,0 +1,113 @@
+#faqs {
+
+    .indices {
+        margin-left: -10px;
+        margin-right: -10px;
+
+        h6 {
+            font-size: 13px;
+            font-weight: 600;
+            color: $primary;
+            margin-bottom: 15px;
+        }
+
+        .group {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        /deep/ .list {
+            .list-item {
+                margin-bottom: 8px;
+            }
+        }
+
+        .index {
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+
+    .faq {
+        margin-top: 60px;
+
+        .group {
+            & + .group {
+                margin-top: 25px;
+            }
+        }
+
+        h2 {
+            font-size: 16px;
+            font-weight: 700;
+            color: $primary;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        /deep/ .accordion {
+            .accordion-item {
+                .piece {
+                    padding-left: 20px;
+                    font-size: 13px;
+
+                    .heading {
+                        .action {
+                            font-size: 28px;
+                            top: 6px;
+                        }
+                    }
+                }
+
+                .content {
+                    .inner-content {
+                        padding-left: 20px;
+                    }
+                }
+            }
+        }
+
+        .answer {
+            font-weight: 500;
+            line-height: 1.4;
+        }
+    }
+
+    @media (max-width: 479px) {
+        & {
+            .indices {
+                @include flex-direction(column);
+                margin-left: 0;
+                margin-right: 0;
+
+                .group {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+
+                h6 {
+                    margin-top: 20px;
+                }
+            }
+
+            .faq {
+                margin-top: 40px;
+
+                h2 {
+                    font-size: 13px;
+                }
+                
+                /deep/ .accordion {
+                    .list {
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

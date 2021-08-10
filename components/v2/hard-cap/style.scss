@@ -1,0 +1,54 @@
+.hard-cap {
+    @include flex-container();
+    @include flex-direction(row);
+    
+    .progress-line {
+        @include flex(0);
+        font-size: 12px;
+        font-weight: 600;
+        color: $dark;
+        text-transform: uppercase;
+        margin-right: 10px;
+    }
+
+    .box {
+        position: relative;
+        @include flex(1);
+        margin-left: 10px;
+
+        .progress-content {
+            top: 0;
+            left: 0;
+            right: 0;
+            border: 1px solid #e4eaeb;
+            @include border-radius(3px);
+        }
+    }
+
+    @media (max-width: 479px) {
+        & {
+            @include flex-direction(column);
+
+            .progress-line {
+                @include flex(1);
+            }
+
+            .list {
+                margin-right: 0;
+  
+                .list-item {
+                    padding-right: 0;
+                }
+            }
+  
+            .box {
+                margin-top: 15px;
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.fade-leave-active {
+    position: absolute;
+}

@@ -1,0 +1,40 @@
+<svg id="megaphone" data-name="megaphone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 56">
+  <defs>
+    <style lang="scss">
+        #g-megaphone .bulb {
+          fill: #ccc;
+        }
+
+        #g-megaphone .cls-3 {
+          fill: #4d4d4d;
+        }
+
+        #g-megaphone .cls-4 {
+          fill: #f2f2f2;
+        }
+
+        #g-megaphone .cls-5 {
+          fill: #ccc;
+        }
+    </style>
+  </defs>
+  <g id="g-megaphone">
+    <path class="bulb" d="M82.75,55c-.17,0,.25,0-.75.05v9.9c1,0,.58.05.75.05a5,5,0,0,0,0-10Z" transform="translate(-31 -36)"/>
+    <rect class="cls-2" y="18" width="4" height="14"/>
+    <polygon class="cls-2" points="49 44.5 23 34.5 23 15.5 49 5.5 49 44.5"/>
+    <path class="cls-3" d="M83,86H80V36h3Zm-2-1h1V37H81Z" transform="translate(-31 -36)"/>
+    <rect class="cls-2" x="8" y="35" width="6" height="21"/>
+    <rect class="cls-3" x="9" y="40" width="2" height="1"/>
+    <rect class="cls-3" x="9" y="43" width="2" height="1"/>
+    <rect class="cls-3" x="9" y="46" width="2" height="1"/>
+    <rect class="cls-3" x="9" y="49" width="2" height="1"/>
+    <rect class="cls-3" x="62" y="24" width="6" height="1"/>
+    <rect class="cls-3" x="92.05" y="66.84" width="1" height="6" transform="translate(-53.28 49.89) rotate(-45)"/>
+    <rect class="cls-3" x="88.84" y="50.95" width="6" height="1" transform="translate(-40.48 44.01) rotate(-45)"/>
+    <rect class="cls-4" x="4" y="15" width="19" height="20"/>
+    <rect class="cls-3" x="4" y="15" width="1" height="20"/>
+    <rect class="cls-3" x="22" y="15" width="1" height="20"/>
+    <rect class="bulb" x="14" y="35" width="1" height="21"/>
+    <rect class="cls-5" x="6" y="16" width="15" height="6"/>
+  </g>
+</svg>

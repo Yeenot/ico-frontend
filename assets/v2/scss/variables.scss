@@ -1,0 +1,17 @@
+$default: #645f5f;
+$light-default: #a7abbc;
+$dark: #333333;
+$primary: #1b2c65;
+$secondary: #533e8b;
+$tertiary: #0f92e2;
+$active: #25ae88;
+
+$default-font-size: 12px;
+
+$desktop_large: "(min-width: 1281px)";
+$desktop: "(min-width: 1025px) and (max-width: 1280px)";
+$tablet_portrait: "(min-width: 768px) and (max-width: 1024px)";
+$tablet_landscape: "(min-width: 768px) and (max-width: 1024px) and (orientation: landscape)";
+$phone_large: "(min-width: 481px) and (max-width: 767px)";
+$phone: "(max-width: 767px)";
+$phone_small: "(max-width: 480px)";

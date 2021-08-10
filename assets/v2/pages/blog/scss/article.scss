@@ -1,0 +1,205 @@
+#article {
+    font-size: 14px;
+
+    .holder {
+        max-width: 948px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 15px 20px 0 20px;
+    }
+
+    .breadcrumbs {
+        font-size: 12px;
+        /deep/ .list-item {
+            & + .list-item {
+                padding-left: 0;
+
+                &:before {
+                    content: "/";
+                    margin-right: 5px;
+                }
+            }
+
+            a {
+                display: inline;
+            }
+        }
+    }
+
+    .content {
+        margin-top: 40px;
+    }
+
+    .img-container {
+        position: relative;
+        max-width: 918px;
+        margin-left: auto;
+        margin-right: auto;
+
+        img {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .info {
+        margin-bottom: 40px;
+        text-align: center;
+
+        h1 {
+            font-size: 20px;
+        }
+
+        .others {
+            display: inline-block;
+            max-width: 100%;
+
+            /deep/ .list {
+                .list-item {
+                    & +.list-item {
+                        padding-left: 0;
+
+                        &:before {
+                            content: "|";
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+
+            .category {
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    .description {
+        margin-top: 40px;
+
+        /deep/ {
+            table {
+                thead {
+                    tr {
+                        th,td {
+                            font-size: 12px;
+                            font-weight: 600;
+                            border: 1px solid #ddd;
+                            padding: 8px 5px;
+                            background-color: #ebf2f5;
+                        }
+                    }
+                }
+                tbody {
+                    tr {
+                        th,td {
+                            font-size: 12px;
+                            border: 1px solid #ddd;
+                            padding: 5px 5px;
+                        }
+                    }
+                }
+            }
+
+            i {
+                font-size: 12px !important;
+            }
+
+            img {
+                display: inline;
+            }
+        }
+    }
+
+    .comments {
+        margin-top: 20px;
+    }
+
+    .navigation {
+        font-size: 13px;
+        margin-top: 40px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        border-top: 1px solid #e6eced;
+
+        .previous,
+        .next {
+            cursor: pointer;
+
+            .fa {
+                color: #464c50;
+            }
+
+            &.previous {
+                float: left;
+
+                .fa {
+                    margin-right: 10px;
+                }
+            }
+
+            &.next {
+                float: right;
+
+                .fa {
+                    margin-left: 10px;
+                }
+            }
+
+            &.disable {
+                color: #b2b8ba;
+                cursor: not-allowed;
+                
+                .fa {
+                 color: #11a0f8;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        & {
+            font-size: 12px;
+
+            .info {
+                h1 {
+                    font-size: 18px;
+                }
+            }
+
+            .description {
+                /deep/ {
+                    .table-responsive {
+                        overflow-x: auto;
+                    }
+                    
+                    h2, h3, h4, h5, h6 {
+                        font-size: 14px !important;
+                        font-weight: 600 !important;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 479px) {
+
+        .info {
+            h1 {
+                font-size: 16px;
+            }
+
+            .others {
+                font-size: 12px;
+            }
+        }
+
+        .img-container {
+    
+            .category {
+                h3 {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}

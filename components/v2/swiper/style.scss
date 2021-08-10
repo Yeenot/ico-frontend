@@ -1,0 +1,23 @@
+.swiper {
+    position: relative;
+
+    .swipe--next, .swipe--prev {
+        transition: opacity .5s;
+        position: absolute;
+        top: 50%;
+        @include translateY(-50%);
+        z-index: 2;
+        cursor: pointer;
+        outline: 0;
+    }
+
+    .swipe--next {
+        img {
+            @include rotate(180deg);
+        }
+    }
+
+    .swiper-button-disabled {
+         opacity: 0 !important;
+    }
+}

@@ -1,0 +1,67 @@
+.accordion-legend {
+    text-align: right;
+    position: relative;
+    top: 12px;
+
+    .group {
+        position: relative;
+        display: inline-block;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: $light-default;
+        margin-bottom: 12px;
+        padding-right: 36px;
+        cursor: pointer;
+
+        .actions {
+            font-size: 35px;
+            font-weight: 300;
+            color: #cfdefb;
+            position: absolute;
+            top: -13px;
+            right: -7px;
+
+            .first {
+                display: inline-block;
+                position: relative;
+                top: -3px;
+                left: 4px;
+            }
+
+            .second {
+                display: inline-block;
+                position: relative;
+                top: 3px;
+                left: -4px;
+            }
+        }
+
+        & + .group {
+            margin-left: 25px;
+        }
+
+        &.collapse-all {
+            .actions {
+                .first {
+                    @include rotate(45deg);
+                }
+
+                .second {
+                    top: 2px;
+                    @include rotate(45deg);
+                }
+            }
+        }
+    }
+    
+}
+
+@media #{$phone} {
+    .accordion-legend {
+        text-align: center;
+
+        .wrapper {
+            display: inline-block;
+        }
+    }
+}

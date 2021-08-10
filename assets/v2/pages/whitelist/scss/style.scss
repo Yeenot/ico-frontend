@@ -1,0 +1,151 @@
+#whitelist {
+
+    h2 {
+        font-size: 16px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .headline {
+        h2 {
+            margin-bottom: 0;
+        }
+    }
+
+    .table-wrapper {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    td.name {
+        width: 24%;
+    }
+    td.market {
+        width: 25%;
+    }
+    td.join {
+        width: 140px;
+    }
+
+    .name {
+        font-size: 14px;
+        font-weight: 600;
+        color: $primary;
+
+        a {
+            color: inherit;
+        }
+
+        .info {
+            position: relative;
+            padding-top: 3px;
+            padding-left: 45px;
+            min-height: 35px;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                width: 35px;
+                height: 35px;
+            }
+            
+        }
+    }
+
+    .date {
+        .status {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: capitalize;
+            text-align: center;
+
+            &.open {
+                color: #26ae88;
+            }
+            
+            &.closed {
+                color: #e95160;
+            }
+
+            &.soon {
+                color: $secondary;
+            }
+        }
+    }
+
+    /deep/ .countdown {
+        margin-top: 5px;
+    }
+
+    @media (max-width: 479px) {
+        & {
+            h2 {
+                margin-bottom: 20px;
+            }
+
+            .name {
+                font-size: 13px;
+
+                .info {
+                    display: inline-block;
+                    max-width: 100%;
+                }
+            }
+
+            /deep/ .countdown {
+                .wrapper {
+                    .list-item {
+
+                        .digit {
+                            font-size: 14px;
+                        }
+
+                        .text {
+                            font-size: 10px;
+                        }
+
+                        &:after {
+                            font-size: 18px;
+                            top: 0px;
+                            right: -6px;
+                        }
+                    }
+                }
+            }
+            
+            .table-wrapper {
+                /deep/ .my-table {
+                    tbody {
+                        display: block;
+
+                        tr {
+                            display: block;
+                            
+                            td {
+                                width: 100%;
+                                display: block;
+                                text-align: center;
+
+                                &:first-child {
+                                    padding-top: 10px;
+                                }
+                                
+                                &:last-child {
+                                    padding-bottom: 10px;
+                                }
+                            }
+
+                            &.spacer {
+                                height: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

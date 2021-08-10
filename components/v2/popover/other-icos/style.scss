@@ -1,0 +1,50 @@
+.other-icos-popover {
+    max-width: 280px;
+    font-weight: 400;
+    padding: 18px 40px;
+
+    .notes {
+        line-height: 1.63;
+        margin-bottom: 26px;
+    }
+
+    .name {
+        font-weight: 700;
+        text-transform: uppercase;
+
+        &.upcoming {
+            color: #1b2c65;
+        }
+
+        &.running {
+            color: #25ae88;
+        }
+
+        &.finished {
+            color: #ec5435;
+        }
+    }
+
+    .dates {
+        margin-top: 14px;
+        text-align: left;
+
+        .date {
+            margin-bottom: 11px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .label {
+                width: 40px;
+            }
+
+            .value {
+                font-weight: 700;
+                color: $dark;
+                padding-left: 8px;
+            }
+        }
+    }
+}

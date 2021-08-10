@@ -1,0 +1,26 @@
+.popover {
+    .inner {
+        // display: none;
+        position: absolute;
+        left: 0;
+        z-index: 2;
+        transform: translateY(5px);
+    }
+
+    &.open {
+        .inner {
+            display: block;
+        }
+    }
+
+    .content {
+        position: relative;
+        background-color: #ffffff;
+        @include box-shadow(0px 5px 28.5px 1.5px rgba(148, 156, 171, 0.2));
+        @include border-radius (4px);
+        text-align: center;
+        font-size: 14px;
+        color: #645f5f;
+        padding: 18px 40px;
+    }
+}
